@@ -25,12 +25,12 @@ namespace VibrationDevice
         private static DeviceClient deviceClientVibrationAlertSensor;
 
         // The device connection string to authenticate the device with your IoT hub.
-        private readonly static string deviceConnectionStringVibrationSensor = "HostName=tsi-reference-uppgift-rg.azure-devices.net;DeviceId=VibrationSensor;SharedAccessKey=SWv7cKPfYVkNOiw9wQKQKlkIscmTCcSMQMopiva7YQg=";
-        private readonly static string deviceConnectionStringTemperatureSensor = "HostName=tsi-reference-uppgift-rg.azure-devices.net;DeviceId=TemperatureSensor;SharedAccessKey=qr2NazhINxmUr5fxnhwu0SYE/FfyLQRZ7bHVYh2E2pw=";
-        private readonly static string deviceConnectionStringSpeedSensor = "HostName=tsi-reference-uppgift-rg.azure-devices.net;DeviceId=BeltSpeedSensor;SharedAccessKey=I1UXY+O5S/h/X/wJRExiWGx6EycR2D8FSEAg1RmScTg=";
-        private readonly static string deviceConnectionStringPackagesSensor = "HostName=tsi-reference-uppgift-rg.azure-devices.net;DeviceId=PackagesSensor;SharedAccessKey=V3sbXOTY87v61Y1H/g/Qe4SSyIyxucroIB8tTO29CsE=";
-        private readonly static string deviceConnectionStringTemperatureAlertSensor = "HostName=tsi-reference-uppgift-rg.azure-devices.net;DeviceId=TempAlert;SharedAccessKey=JLW8JjWxzkvSFBbAESXi6OUyPkzmCaMSIeZOzNuL86g=";
-        private readonly static string deviceConnecitonStringVibrationAlertSensor = "HostName=tsi-reference-uppgift-rg.azure-devices.net;DeviceId=VibAlert;SharedAccessKey=PhLy0eSp7euOp9idboQtjTTUehNHNKWRlds2/ErrZ6Y=";
+        private readonly static string deviceConnectionStringVibrationSensor = "HostName=uppgift1-reference-iot.azure-devices.net;DeviceId=VibrationSensor;SharedAccessKey=5I4L/ZhTI5SMr3w2DlxFxop6Rwy0g5fim5a/9agkyqM=";
+        private readonly static string deviceConnectionStringTemperatureSensor = "HostName=uppgift1-reference-iot.azure-devices.net;DeviceId=TemperatureSensor;SharedAccessKey=N+aSrJSKjB1WgV08M4dXcZMF+wxnM1/g3HFhGOnkYIo=";
+        private readonly static string deviceConnectionStringSpeedSensor = "HostName=uppgift1-reference-iot.azure-devices.net;DeviceId=SpeedSensor;SharedAccessKey=pm7QIzJ1vsNkMFEKvg0snbMRlwrNqMSGzmOwZqrfzdM=";
+        private readonly static string deviceConnectionStringPackagesSensor = "HostName=uppgift1-reference-iot.azure-devices.net;DeviceId=PackagesSensor;SharedAccessKey=mUp2DBCrRsC8LFUdPp3qsmRb3cTXKqcRI5LBePsyvZw=";
+        private readonly static string deviceConnectionStringTemperatureAlertSensor = "HostName=uppgift1-reference-iot.azure-devices.net;DeviceId=TemperatureAlertSensor;SharedAccessKey=hZfCA6WFkXEaQYAmpPGo14kjCrLSQ3G4jueT6KFyx4Q=";
+        private readonly static string deviceConnecitonStringVibrationAlertSensor = "HostName=uppgift1-reference-iot.azure-devices.net;DeviceId=VibrationAlertSensor;SharedAccessKey=3WEm6VN/GB4E/k8UkgL+BCThKANCzH93C25xRvSNSbc=";
 
         private static void Main(string[] args)
         {
@@ -386,6 +386,10 @@ namespace VibrationDevice
             if (counter == 0)
             {
                 temperature = 110;
+            }
+            if(counter == -50)
+            {
+                temperature = temperature - 60;
             }
         }
     }
